@@ -152,6 +152,10 @@ nav .container {
         .active h3 {
             color: var(--color-primary);
         }
+
+        .mess1 {
+            display: none;
+        }
     }
 
     i {
@@ -644,45 +648,47 @@ main .container .left .profile {
 
 /*  For small tablets and mobile phones */
 @media screen and (max-width: 992px) {
-    nav .search-bar {
-        display: none;
+
+    nav .container {
+
+        .menu {
+            position: fixed;
+            width: 100vw;
+            left: 0;
+            bottom: 0;
+            padding:20px 25px;
+    
+            h3 {
+                display: none;
+            }
+
+            .mess1 {
+                display: block;
+            }
+        }
+
+        .search-container {
+            width: 50%;
+        }
+
+        .create .mess2 {
+            display: none;
+        }
     }
 
     main .container {
-        grid-template-columns: 0 auto 0;
+        grid-template-columns: auto 0;
         gap: 0;
     }
 
     main .container .left {
 
-
+        display: none;
 
         .profile {
             display: none;
         }
 
-        .sidebar {
-            display: flex;
-            width: 100vw;
-            position: relative;
-
-            position: fixed;
-            bottom: 0;
-
-        }
-    }
-
-    .left .notifications-popup {
-        position: absolute;
-        left: -20rem;
-        width: 20rem;
-    }
-
-    .left .notifications-popup::before {
-        display: absolute;
-        top: 1.3rem;
-        left: calc(20rem - 0.6rem);
-        display: block;
     }
 
     main .container .middle {
